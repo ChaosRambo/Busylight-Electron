@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Busylight-Electron</title>
+        <link href="../css/index.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>window.$ = window.jQuery = require('./jquery-3.0.0.min.js');</script>
+    </head>
+    <body>
+        <h1>Busylight-Electron</h1>
+        <table>
+            <tr>
+                <td>
+                    <button class="button white">White</button>
+                </td>
+                <td>
+                    <button class="button white">White Pulse</button>
+                </td>
+                <td>
+                    <button class="button white">White Blink</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="button red">Red</button>
+                </td>
+                <td>
+                    <button class="button red">Red Pulse</button>
+                </td>
+                <td>
+                    <button class="button red">Red Blink</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="button green">Green</button>
+                </td>
+                <td>
+                    <button class="button green">Green Pulse</button>
+                </td>
+                <td>
+                    <button class="button green">Green Blink</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="button blue">Blue</button>
+                </td>
+                <td>
+                    <button class="button blue">Blue Pulse</button>
+                </td>
+                <td>
+                    <button class="button blue">Blue Blink</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="button yellow">Yellow</button>
+                </td>
+                <td>
+                    <button class="button yellow">Yellow Pulse</button>
+                </td>
+                <td>
+                    <button class="button yellow">Yellow Blink</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button class="button turnoff">Turn light off</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            // You can also require other files to run in this process
+            require('../js/renderer/renderer.js')
+        </script>
+    </body>
+</html>
