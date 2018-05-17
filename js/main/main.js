@@ -4,6 +4,8 @@ const app = electron.app;
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
+const ipcMain = electron.ipcMain;
+
 const path = require('path');
 const url = require('url');
 
@@ -16,7 +18,7 @@ let mainWindow;
 function createWindow () {
     // Create the browser window.
     bl.light('green');
-    mainWindow = new BrowserWindow({width: 800, height: 600});
+    mainWindow = new BrowserWindow({width: 660, height: 1100});
 
     // and load the index.html of the app.
     mainWindow.loadURL(url.format({
@@ -57,6 +59,36 @@ app.on('activate', function () {
     // dock icon is clicked and there are no other windows open.
     if (mainWindow === null) {
         createWindow()
+    }
+});
+
+var light;
+ipcMain.on('input', function (event, arg) {
+    console.log(arg);
+    switch (arg[1]) {
+        case "light":
+            if (arg[0] == "false") {
+                bl.light(false);
+            } else {
+                bl.light(arg[0]);
+            }
+            break;
+        case "pulse":
+            bl.pulse(arg[0]);
+            break;
+        case "blink":
+            bl.blink(arg[0]);
+            break;
+        case "sound":
+            if (arg[0] == "false") {
+                bl.ring(false);
+            } else {
+                bl.ring(arg[0]);
+            }
+            break;
+        default:
+            bl.off();
+            break;
     }
 });
 

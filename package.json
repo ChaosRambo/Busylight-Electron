@@ -1,11 +1,14 @@
 {
   "name": "electron-quick-start",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
-  "main": "main.js",
+  "description": "Simple Electron Busylight example",
+  "main": "./js/main/main.js",
   "scripts": {
     "start": "electron ./js/main/main.js",
-    "postinstall": "electron-rebuild --force"
+    "postinstall": "electron-rebuild --force",
+    "dist-win": "build -w --x64",
+    "dist-linux": "build -l --x64",
+    "dist-mac": "build -o --x64"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -15,13 +18,22 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Daniel Thümen",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.0",
+    "electron": "^2.0.1",
+    "electron-builder": "^20.13.4",
     "electron-rebuild": "^1.7.3"
   },
+  "build": {
+    "appId": "electron.busylight",
+    "win": {},
+    "linux": {},
+    "mac": {}
+  },
   "dependencies": {
-    "busylight": "^0.3.2"
+    "busylight": "^0.3.2",
+    "jquery": "^3.3.1"
   }
 }
+g

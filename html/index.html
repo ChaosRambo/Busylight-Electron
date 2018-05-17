@@ -4,70 +4,122 @@
         <meta charset="UTF-8">
         <title>Busylight-Electron</title>
         <link href="../css/index.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>window.$ = window.jQuery = require('./jquery-3.0.0.min.js');</script>
+        <script>const $ = jQuery = require('jquery');</script>
     </head>
     <body>
         <h1>Busylight-Electron</h1>
         <table>
+            <th>
+                <td colspan="3">
+                    <div class="header">Lights</div>
+                </td>
+            </th>
             <tr>
                 <td>
-                    <button class="button white">White</button>
+                    <button class="button white light">White</button>
                 </td>
                 <td>
-                    <button class="button white">White Pulse</button>
+                    <button class="button white pulse">White Pulse</button>
                 </td>
                 <td>
-                    <button class="button white">White Blink</button>
+                    <button class="button white blink">White Blink</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button class="button red">Red</button>
+                    <button class="button red light">Red</button>
                 </td>
                 <td>
-                    <button class="button red">Red Pulse</button>
+                    <button class="button red pulse">Red Pulse</button>
                 </td>
                 <td>
-                    <button class="button red">Red Blink</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="button green">Green</button>
-                </td>
-                <td>
-                    <button class="button green">Green Pulse</button>
-                </td>
-                <td>
-                    <button class="button green">Green Blink</button>
+                    <button class="button red blink">Red Blink</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button class="button blue">Blue</button>
+                    <button class="button green light">Green</button>
                 </td>
                 <td>
-                    <button class="button blue">Blue Pulse</button>
+                    <button class="button green pulse">Green Pulse</button>
                 </td>
                 <td>
-                    <button class="button blue">Blue Blink</button>
+                    <button class="button green blink">Green Blink</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button class="button yellow">Yellow</button>
+                    <button class="button blue light">Blue</button>
                 </td>
                 <td>
-                    <button class="button yellow">Yellow Pulse</button>
+                    <button class="button blue pulse">Blue Pulse</button>
                 </td>
                 <td>
-                    <button class="button yellow">Yellow Blink</button>
+                    <button class="button blue blink">Blue Blink</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="button yellow light">Yellow</button>
+                </td>
+                <td>
+                    <button class="button yellow pulse">Yellow Pulse</button>
+                </td>
+                <td>
+                    <button class="button yellow blink">Yellow Blink</button>
                 </td>
             </tr>
             <tr>
                 <td colspan="3">
-                    <button class="button turnoff">Turn light off</button>
+                    <button class="button false light">Turn light off</button>
+                </td>
+            </tr>
+            <th>
+                <td colspan="3">
+                    <div class="header">Sounds</div>
+                </td>
+            </th>
+            <tr>
+                <td>
+                    <button class="button OpenOffice sound">OpenOffice</button>
+                </td>
+                <td>
+                    <button class="button Quiet sound">Quiet</button>
+                </td>
+                <td>
+                    <button class="button Funky sound">Funky</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="button FairyTale sound">FairyTale</button>
+                </td>
+                <td>
+                    <button class="button KuandoTrain sound">KuandoTrain</button>
+                </td>
+                <td>
+                    <button class="button TelephoneNordic sound">TelephoneNordic</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="button TelephoneOriginal sound">TelephoneOriginal</button>
+                </td>
+                <td>
+                    <button class="button TelephonePickMeUp sound">TelephonePickMeUp</button>
+                </td>
+                <td>
+                    <button class="button Buzz sound">Buzz</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button class="button false sound">Turn sound off</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button class="button false">Turn everything off</button>
                 </td>
             </tr>
         </table>
